@@ -10,6 +10,7 @@ Has all the server stuff [wip].
 * `express`: serve http;
 * `express-validator`: validate data from api;
 * `prismjs`: highlight code;
+* `showdown`: markdown converter;
 
 ### Dev Dependencies
 
