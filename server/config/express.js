@@ -14,5 +14,7 @@ module.exports = function(){
   blog(app)
   pages(app)
 
+  console.log('Running blog @ 3001')
+
   return app
 }
