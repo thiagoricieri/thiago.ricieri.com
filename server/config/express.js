@@ -1,7 +1,8 @@
 const express = require('express')
-    , consign = require('consign')
     , bodyParser = require('body-parser')
     , expressValidator = require('express-validator')
+    , blog = require('../routes/blog')
+    , pages = require('../routes/pages')
 
 module.exports = function(){
   let app = express()
@@ -10,9 +11,8 @@ module.exports = function(){
   app.use(bodyParser.json())
   app.use(expressValidator())
 
-  consign({ cwd: __dirname })
-   .include('../routes')
-   .into(app)
+  blog(app)
+  pages(app)
 
   return app
 }
