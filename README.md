@@ -3,14 +3,6 @@
 ## Server
 Has all the server stuff [wip].
 
-## Running it
-```bash
-cd server/
-npm run dev
-# or
-node index.js
-```
-
 ### Dependencies
 
 * `body-parser`: parse body from requests;
