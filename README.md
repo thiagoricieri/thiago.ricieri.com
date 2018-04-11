@@ -7,8 +7,10 @@ Has all the server stuff [wip].
 
 * `body-parser`: parse body from requests;
 * `ejs`: generate html with template strings from server;
+* `express-ejs-layouts`: use layouts with ejs;
 * `express`: serve http;
 * `express-validator`: validate data from api;
+* `js-yaml`: convert YAML to JS dictionaries;
 * `prismjs`: highlight code;
 * `showdown`: markdown converter;
 
