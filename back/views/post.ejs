@@ -11,7 +11,12 @@
   </head>
   <body>
     <%- include includes/header.ejs %>
-    <%- body %>
+    <main role="main" class="container">
+      <div class="row">
+        <%- body %>
+        <%- include includes/aside.ejs %>
+      </div>
+    </main>
     <%- include includes/footer.ejs %>
     <%- include includes/scripts.ejs %>
   </body>
