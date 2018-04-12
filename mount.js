@@ -98,6 +98,7 @@ function generateTableOfContents(converted) {
       url: each.url,
       meta: each.meta
     }})
+    .reverse()
 }
 function saveTableOfContents(converted) {
   fs.writeFileSync('./dist/toc.json', JSON.stringify(converted, null, 2))

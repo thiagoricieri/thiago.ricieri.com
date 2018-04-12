@@ -1,4 +1,4 @@
-const { okHtml, basicInfoAnd } = require('../utils/html')
+const { okHtml, notFound, basicInfoAnd } = require('../utils/html')
     , { tableOfContents, loadHtml } = require('../utils/dist')
     , { convertDate } = require('../utils/misc')
 
@@ -19,6 +19,11 @@ module.exports = function(app) {
       flat.url = `/${each.url}`
       return flat
     })
+
+    if (reducedToc.length == 0) {
+      notFound(httpRes).send('¯\\_(ツ)_/¯')
+      return
+    }
 
     okHtml(httpRes).render('pages/index', basicInfoAnd({
       title: 'thiago ricieri blog',

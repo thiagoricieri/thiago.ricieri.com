@@ -1,10 +1,11 @@
+<% var openScript = "width=500,height=500,top=300px,left=300px"; %>
 <div class="col-md-8 blog-main">
   <div class="blog-post">
     <h2 class="blog-post-title"><%= postTitle %></h2>
     <p class="blog-post-meta">
       <%= humanDate %> by
       <a href="https://twitter.com/thiagoricieri"  target="_blank">Thiago</a>
-      <% if (app) { %>
+      <% if (hasApp) { %>
         &bull;
         <a class="btn btn-outline-primary btn-sm" href="/<%= url %>/app" role="button">
           Open this post&rsquo;s app!
@@ -14,11 +15,34 @@
 
     <%- html %>
 
-    <% if (app) { %>
+    <% if (hasApp) { %>
       <hr />
       <a class="btn btn-primary" href="/<%= url %>/app" role="button">
         Open this post&rsquo;s app!
       </a>
     <% } %>
+
+    <hr class="top-border">
+    <div class="text-center padding-four-top padding-four-bottom col-md-12 col-sm-12 col-xs-12 no-padding-lr">
+      Share:
+      <a class="btn social-icon social-icon-large button"
+        href="https://linkedin.com/shareArticle?mini=true&url=<%= blogUrl %>/<%= url %>&title=<%= title %>"
+        target="_blank" onclick="window.open(this.href,this.title,'<%= openScript %>'); return false;"
+        rel="nofollow" title="<%= title %>">LinkedIn</a>
+      <a class="btn social-icon social-icon-large button"
+        href="https://twitter.com/share?url=<%= blogUrl %>/<%= url %>"
+        onclick="window.open(this.href,this.title,'<%= openScript %>');  return false;"
+        rel="nofollow"
+        target="_blank"
+        title="<%= title %>">Twitter</a>
+      <a class="btn social-icon social-icon-large button"
+        href="http://www.facebook.com/sharer.php?u=<%= blogUrl %>/<%= url %>"
+        onclick="window.open(this.href, this.title,'<%= openScript %>'); return false;"
+        rel="nofollow"
+        target="_blank"
+        title="<%= blogUrl %>/<%= title %>">Facebook</a>
+      <a class="btn social-icon social-icon-large button"
+        href="http://reddit.com/submit?url=<%= blogUrl %>/<%= url %>&amp;title=<%= title %>" onclick="window.open(this.href,this.title,'<%= openScript %>');  return false;" data-pin-custom="true">Reddit</a>
+    </div>
   </div>
 </div>

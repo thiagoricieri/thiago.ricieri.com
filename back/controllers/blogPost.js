@@ -20,6 +20,7 @@ module.exports = function (app){
     meta.layout = meta.layout || 'post'
     meta.humanDate = convertDate(meta.date)
     meta.html = html
+    meta.hasApp = (meta.app != undefined && meta.app != null)
 
     okHtml(httpRes).render('pages/post', basicInfoAnd(meta))
   })

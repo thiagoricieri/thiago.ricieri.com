@@ -115,12 +115,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 .blog-post-title {
   margin-bottom: .25rem;
-  font-size: 2.5rem;
+  font-size: 2.5rem !important;
 }
 .blog-post-meta {
   margin-bottom: 1.25rem;
   color: #999;
 }
+.blog-post h1 { font-size: 2rem }
+.blog-post h2 { font-size: 1.5rem }
+.blog-post h3 { font-size: 1.5rem }
+.blog-post h4 { font-size: 1.25rem }
+.blog-post h5 { font-size: 1rem }
+.blog-post h6 { font-size: 0.75rem }
+
+.top-border { border-style: dashed; }
 
 /*
  * Footer
