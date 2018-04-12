@@ -1,6 +1,10 @@
 const { okHtml, notFound, basicInfoAnd } = require('../utils/html')
     , { loadHtml, loadMeta, tableOfContents } = require('../utils/dist')
     , { convertDate } = require('../utils/misc')
+    , constants = require('../config/constants')
+    , fs = require('fs')
+    , path = require('path')
+    , staticDir = path.join(__dirname, '../../html')
 
 module.exports = function (app){
 
@@ -9,6 +13,13 @@ module.exports = function (app){
     var url = httpReq.params.blogUrl
     var html = loadHtml(url)
     var meta = loadMeta(url)
+    var staticFile = `${staticDir}/${url}.html`
+
+    if (constants.useStaticFiles && fs.existsSync(staticFile)) {
+      console.log(`Using static file for --> ${url}`)
+      okHtml(httpRes).send(fs.readFileSync(staticFile, 'utf8'))
+      return
+    }
 
     if (!html) {
       notFound(httpRes)

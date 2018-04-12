@@ -1,6 +1,10 @@
 const { okHtml, notFound, basicInfoAnd } = require('../utils/html')
     , { tableOfContents, loadHtml } = require('../utils/dist')
     , { convertDate } = require('../utils/misc')
+    , constants = require('../config/constants')
+    , fs = require('fs')
+    , path = require('path')
+    , staticDir = path.join(__dirname, '../../html')
 
 module.exports = function(app) {
   // GET index page
@@ -11,6 +15,13 @@ module.exports = function(app) {
     var start = page * max
     var end = start + max
     var reducedToc = toc.slice(start, end)
+    var staticFile = `${staticDir}/index.html`
+
+    if (constants.useStaticFiles && fs.existsSync(staticFile)) {
+      console.log(`Using static file for --> index`)
+      okHtml(httpRes).send(fs.readFileSync(staticFile, 'utf8'))
+      return
+    }
 
     reducedToc = reducedToc.map(each => {
       var flat = each.meta
