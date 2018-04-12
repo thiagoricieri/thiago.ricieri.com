@@ -20,6 +20,7 @@ module.exports.basicInfoAnd = function(plus) {
     pageTitle: 'thiago ricieri blog',
     pageAuthor: 'Thiago Ricieri',
     pageDescription: 'A blog about the remote life of a software engineer, covering ios, android, front-end and back-end development.',
-    pageImage: 'http://blog.ricieri.com/assets/img/thiago-ricieri-face.jpg'
+    pageImage: 'http://blog.ricieri.com/assets/img/thiago-ricieri-face.jpg',
+    twitterUser: 'thiagoricieri'
   }, plus)
 }
