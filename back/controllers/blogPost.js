@@ -24,6 +24,7 @@ module.exports = function (app){
 
     meta.pageTitle = meta.postTitle
     meta.pageDescription = meta.description || meta.postTitle
+    meta.pageType = 'article'
 
     if (meta.author) meta.pageAuthor = meta.author
     if (meta.featured) meta.pageImage = meta.featured
