@@ -39,6 +39,6 @@ module.exports = function (app){
       return
     }
 
-    okHtml(httpRes).send('exists')
+    okHtml(httpRes).send(meta.app)
   })
 }

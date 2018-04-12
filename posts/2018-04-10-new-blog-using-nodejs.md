@@ -1,6 +1,10 @@
 ---
 layout: post
 title: New blog engine using Node.js and Markdown, open-sourced!
+app: {
+  prop: 1,
+  prop1: 2
+}
 tags:
 - open-source
 - blog

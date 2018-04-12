@@ -1,8 +1,24 @@
 <div class="col-md-8 blog-main">
   <div class="blog-post">
     <h2 class="blog-post-title"><%= postTitle %></h2>
-    <p class="blog-post-meta"><%= humanDate %> by <a href="https://twitter.com/thiagoricieri"  target="_blank">Thiago</a></p>
+    <p class="blog-post-meta">
+      <%= humanDate %> by
+      <a href="https://twitter.com/thiagoricieri"  target="_blank">Thiago</a>
+      <% if (app) { %>
+        &bull;
+        <a class="btn btn-outline-primary btn-sm" href="/<%= url %>/app" role="button">
+          Open this post&rsquo;s app!
+        </a>
+      <% } %>
+    </p>
 
     <%- html %>
+
+    <% if (app) { %>
+      <hr />
+      <a class="btn btn-primary" href="/<%= url %>/app" role="button">
+        Open this post&rsquo;s app!
+      </a>
+    <% } %>
   </div>
 </div>
