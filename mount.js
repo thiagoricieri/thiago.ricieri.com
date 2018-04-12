@@ -90,8 +90,12 @@ function saveHtmlToDist(converted) {
   })
   return converted
 }
+function isPost(item) {
+  return item.meta.type == undefined || item.meta.type == null || item.meta.type == "post"
+}
 function generateTableOfContents(converted) {
   return converted
+    .filter(isPost)
     .map(each => { return {
       name: each.name,
       date: each.date,
@@ -108,7 +112,9 @@ function finalLog(converted) {
   converted.forEach(each => console.log(`--> Converted file ${each.name} to HTML & JSON...`))
 }
 function extractDate(name) {
-  return name.match(/(20\d{2}-\d{2}-\d{2})/gi)[0]
+  var matches = name.match(/(20\d{2}-\d{2}-\d{2})/gi)
+  if (matches) return matches[0]
+  return null
 }
 function extractUrl(name) {
   return name.replace(`${extractDate(name)}-`, '')

@@ -1,0 +1,14 @@
+<div class="col-md-8 blog-main">
+  <div class="blog-post">
+    <h2 class="blog-post-title"><%= postTitle %></h2>
+
+    <%- html %>
+
+    <% if (hasApp) { %>
+      <hr />
+      <a class="btn btn-primary" href="/<%= url %>/app" role="button">
+        Open this post&rsquo;s app!
+      </a>
+    <% } %>
+  </div>
+</div>

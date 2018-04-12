@@ -28,7 +28,8 @@ module.exports = function (app){
     if (meta.author) meta.pageAuthor = meta.author
     if (meta.featured) meta.pageImage = meta.featured
 
-    okHtml(httpRes).render('pages/post', basicInfoAnd(meta))
+    var type = meta.type || 'post'
+    okHtml(httpRes).render(`pages/${type}`, basicInfoAnd(meta))
   })
 
   // GET /:blog-url/app
