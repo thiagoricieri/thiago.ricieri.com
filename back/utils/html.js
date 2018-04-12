@@ -1,3 +1,5 @@
+const secrets = require('../config/secrets')
+
 module.exports.okHtml = function(httpRes) {
   httpRes.set({
     'Content-Type': 'text/html'
@@ -23,5 +25,5 @@ module.exports.basicInfoAnd = function(plus) {
     pageImage: 'http://blog.ricieri.com/assets/img/thiago-ricieri-face.jpg',
     twitterUser: 'thiagoricieri',
     tags: []
-  }, plus)
+  }, plus, secrets)
 }
