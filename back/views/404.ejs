@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="<%= pageDescription %>">
+    <meta name="keywords" content="<%= tags.join(', ') %>">
+    <meta name="author" content="<%= pageAuthor %>">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@<%= twitterUser %>" />
+    <meta name="twitter:creator" content="@<%= twitterUser %>" />
+
+    <%- include includes/styles.ejs %>
+    <%- include includes/analytics.ejs %>
+
+    <style>
+    footer {
+      background-color: #333;
+      width: 100%;
+      bottom: 0;
+      position: fixed;
+    }
+    .jumbotron {
+      margin-top: 100px;
+    }
+    </style>
+
+    <title>40h4!</title>
+  </head>
+  <body>
+    <main role="main" class="container h-100">
+      <div class="row align-items-center h-100">
+        <div class="col-8 mx-auto">
+          <%- body %>
+        <div>
+      </div>
+    </main>
+    <%- include includes/footer.ejs %>
+    <%- include includes/scripts.ejs %>
+  </body>
+</html>

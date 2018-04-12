@@ -1,0 +1,10 @@
+<% var openScript = "width=500,height=500,top=300px,left=300px"; %>
+<div class="jumbotron h-100">
+  <h1 class="display-4">4-Oh,oh!-4</h1>
+  <h3 class="lead">This page does not exist, maybe the link you have used is broken?</h3>
+  <hr class="my-4">
+  <p>Anyways, try going back to the homepage or tweet me 😄</p>
+  <a class="btn btn-primary" href="<%= blogUrl %>" role="button">Back to home</a> |
+  <a class="btn btn-secondary" href="https://twitter.com/home?status=@thiagoricieri"
+  onclick="window.open(this.href, this.title,'<%= openScript %>'); return false;" role="button">Tweet Thiago</a>
+</div>

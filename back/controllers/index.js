@@ -21,7 +21,7 @@ module.exports = function(app) {
     })
 
     if (reducedToc.length == 0) {
-      notFound(httpRes).send('¯\\_(ツ)_/¯')
+      notFound(httpRes)
       return
     }
 

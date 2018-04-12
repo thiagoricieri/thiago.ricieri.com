@@ -11,7 +11,7 @@ module.exports = function (app){
     var meta = loadMeta(url)
 
     if (!html) {
-      notFound(httpRes).send('¯\\_(ツ)_/¯')
+      notFound(httpRes)
       return
     }
 
@@ -39,7 +39,7 @@ module.exports = function (app){
     var meta = loadMeta(url)
 
     if (!meta) {
-      notFound(httpRes).send('¯\\_(ツ)_/¯')
+      notFound(httpRes)
       return
     }
 
