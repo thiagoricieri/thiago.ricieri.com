@@ -7,7 +7,8 @@
     "dev": "nodemon app",
     "start": "NODE_ENV=production node index.js",
     "test": "mocha --exit tests/**/**.spec.js",
-    "mount": "node mount.js"
+    "mount": "node mount.js",
+    "staticize": "node staticize.js"
   },
   "author": "Thiago Ricieri",
   "license": "MIT",
@@ -30,6 +31,7 @@
     "concurrently": "^3.5.1",
     "faker": "^4.1.0",
     "mocha": "^5.0.1",
-    "nodemon": "^1.17.1"
+    "nodemon": "^1.17.1",
+    "request": "^2.85.0"
   }
 }
