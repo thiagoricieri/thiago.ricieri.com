@@ -29,6 +29,7 @@ module.exports = function(app) {
       title: 'thiago ricieri blog',
       posts: reducedToc,
       layout: 'home',
+      tags: [],
       hasPrev: (start > 0),
       hasNext: (end < toc.length),
       nextPage: page + 1,

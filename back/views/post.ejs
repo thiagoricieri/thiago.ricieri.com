@@ -2,7 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="description" content="<%= pageDescription %>">
+    <meta name="keywords" content="<%= tags.join(', ') %>">
+    <meta name="author" content="<%= pageAuthor %>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta property="og:url" content="<%= blogUrl %>/<%= url %>" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="<%= pageTitle %>" />
+    <meta property="og:description" content="<%= pageDescription %>" />
+    <meta property="og:image" content="<%= pageImage %>" />
 
     <%- include includes/styles.ejs %>
     <%- include includes/analytics.ejs %>

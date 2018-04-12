@@ -22,6 +22,12 @@ module.exports = function (app){
     meta.html = html
     meta.hasApp = (meta.app != undefined && meta.app != null)
 
+    meta.pageTitle = meta.postTitle
+    meta.pageDescription = meta.description || meta.postTitle
+
+    if (meta.author) meta.pageAuthor = meta.author
+    if (meta.featured) meta.pageImage = meta.featured
+
     okHtml(httpRes).render('pages/post', basicInfoAnd(meta))
   })
 
