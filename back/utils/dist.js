@@ -3,7 +3,6 @@ const fs = require('fs')
     , directory = path.join(__dirname, '../../dist')
 
 module.exports.loadHtml = function(blogUrl) {
-  console.log(directory);
   var filename = `${directory}/${blogUrl}.html`
   if (!fs.existsSync(filename)) return null
   return fs.readFileSync(filename, 'utf8')

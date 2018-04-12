@@ -3,9 +3,16 @@
   <% for(var i=0; i<posts.length; i++) { %>
   <div class="blog-post">
     <h2 class="blog-post-title"><a href="<%= posts[i].url %>"><%= posts[i].title %></a></h2>
-    <p class="blog-post-meta"><%= posts[i].humanDate %> by <a href="https://twitter.com/thiagoricieri" target="_blank">Thiago</a></p>
+    <p class="blog-post-meta">
+      <%= posts[i].humanDate %> by <a href="https://twitter.com/thiagoricieri" target="_blank">Thiago</a>
+      <% if (posts[i].app) { %>
+        &bull;
+        <a class="btn btn-outline-primary btn-sm" href="<%= posts[i].url %>/app" role="button">
+          Open this post&rsquo;s app!
+        </a>
+      <% } %>
+    </p>
     <%- posts[i].html %>
-
     <hr />
   </div>
   <% } %>
