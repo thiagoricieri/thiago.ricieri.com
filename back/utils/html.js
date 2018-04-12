@@ -18,11 +18,11 @@ module.exports.notFound = function(httpRes) {
 
 module.exports.basicInfoAnd = function(plus) {
   return Object.assign({
-    blogUrl: 'http://blog.ricieri.com',
+    blogUrl: 'https://thiago.ricieri.com',
     pageTitle: 'thiago ricieri blog',
     pageAuthor: 'Thiago Ricieri',
     pageDescription: 'A blog about the remote life of a software engineer, covering ios, android, front-end and back-end development.',
-    pageImage: 'http://blog.ricieri.com/assets/img/thiago-ricieri-face.jpg',
+    pageImage: 'https://thiago.ricieri.com/assets/img/thiago-ricieri-face.jpg',
     twitterUser: 'thiagoricieri',
     tags: []
   }, plus, secrets)
