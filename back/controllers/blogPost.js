@@ -17,10 +17,28 @@ module.exports = function (app){
 
     meta.postTitle = meta.title
     meta.title = `${meta.title} | thiago ricieri blog`
-    meta.layout = 'post'
+    meta.layout = meta.layout || 'post'
     meta.humanDate = convertDate(meta.date)
     meta.html = html
 
     okHtml(httpRes).render('pages/post', basicInfoAnd(meta))
+  })
+
+  // GET /:blog-url/app
+  app.get("/:blogUrl/app", function(httpReq, httpRes, next) {
+    var url = httpReq.params.blogUrl
+    var meta = loadMeta(url)
+
+    if (!meta) {
+      notFound(httpRes).send('¯\\_(ツ)_/¯')
+      return
+    }
+
+    if (!meta.app) {
+      httpRes.redirect(401, `/${url}`)
+      return
+    }
+
+    okHtml(httpRes).send('exists')
   })
 }
