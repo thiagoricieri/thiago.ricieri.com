@@ -1,7 +1,7 @@
 const fs = require('fs')
     , jsyaml = require('js-yaml')
     , showdown = require('showdown')
-    , config = fs.readFileSync('./mount.config.json', 'utf8')
+    , config = JSON.parse(fs.readFileSync('./mount.config.json', 'utf8'))
     , converter = new showdown.Converter({
         omitExtraWLInCodeBlocks: true,
         simplifiedAutoLink: true,
@@ -69,6 +69,8 @@ function convertToMarkdown(contents) {
   return contents.map(function(file) {
     return {
       name: file.name,
+      date: extractDate(file.name),
+      url: extractUrl(file.name),
       html: converter.makeHtml(file.content),
       meta: jsyaml.load(converter.getMetadata(true))
     }
@@ -76,17 +78,24 @@ function convertToMarkdown(contents) {
 }
 function saveHtmlToDist(converted) {
   converted.forEach(each => {
-    fs.writeFileSync(`./dist/${each.name}.html`, each.html)
-    fs.writeFileSync(`./dist/${each.name}.json`, JSON.stringify(each.meta, null, 2))
+    if(fs.existsSync(`./dist/${each.url}.html`) && config.flushDir) {
+      throw new Error(`Can't create a file, ${each.url} already exists.`)
+    }
+    var newMeta = Object.assign({
+      date: each.date,
+      url: each.url
+    }, each.meta)
+    fs.writeFileSync(`./dist/${each.url}.html`, each.html)
+    fs.writeFileSync(`./dist/${each.url}.json`, JSON.stringify(newMeta, null, 2))
   })
   return converted
 }
 function generateTableOfContents(converted) {
   return converted
-    .map((each) => { return {
+    .map(each => { return {
       name: each.name,
-      date: extractDate(each.name),
-      url: extractUrl(each.name),
+      date: each.date,
+      url: each.url,
       meta: each.meta
     }})
     .reverse()
