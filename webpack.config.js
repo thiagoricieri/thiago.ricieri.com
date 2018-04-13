@@ -3,7 +3,7 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    vanilla: path.resolve(__dirname, './front/vanilla/index')
+    blog: path.resolve(__dirname, './front/blog/index')
   },
   output: {
     path: path.join(__dirname, './assets/dist/'),

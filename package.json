@@ -10,7 +10,7 @@
     "mount": "node mount.js",
     "staticize": "node staticize.js",
     "front:build": "webpack --mode production",
-    "front:dev": "webpack-dev-server --mode development --open"
+    "front:dev": "webpack --mode development --watch"
   },
   "author": "Thiago Ricieri",
   "license": "MIT",
