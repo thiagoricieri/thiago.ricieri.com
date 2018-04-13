@@ -1,11 +1,12 @@
 # Thiago Ricieri's Blog
 
-## Server
-Has all the server stuff [wip].
+## Getting started
+Read my [post about the creation of this project](https://thiago.ricieri.com/blog-engine-nodejs-open-source) to get detailed information about how to use this repository.
 
 ### Dependencies
 
 * `body-parser`: parse body from requests;
+* `date-and-time`: prints pretty date and time;
 * `ejs`: generate html with template strings from server;
 * `express-ejs-layouts`: use layouts with ejs;
 * `express`: serve http;
@@ -13,6 +14,7 @@ Has all the server stuff [wip].
 * `js-yaml`: convert YAML to JS dictionaries;
 * `prismjs`: highlight code;
 * `showdown`: markdown converter;
+* `underscore`: collection of helpful functions;
 
 ### Dev Dependencies
 
@@ -20,6 +22,7 @@ Has all the server stuff [wip].
 * `concurrently`: run scripts concurrently;
 * `faker`: generate fake data for tests;
 * `nodemon`: autoreload server when files are changed;
+* `request`: simple http client;
 
 # License MIT
 Copyright 2018 (c) Thiago Ricieri
