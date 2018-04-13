@@ -24,7 +24,7 @@ Read my [post about the creation of this project](https://thiago.ricieri.com/blo
 * `nodemon`: autoreload server when files are changed;
 * `request`: simple http client;
 
-# License MIT
+# License
 ```
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 Version 2, December 2004
