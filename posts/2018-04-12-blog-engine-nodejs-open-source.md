@@ -6,6 +6,7 @@ tags:
 - node.js
 - markdown
 - javascript
+published: true
 ---
 I like to write, and I always wanted to acquire the habit of blogging regularly. I've set up a dozen of Wordpress blogs for myself but never carried them on too much.
 

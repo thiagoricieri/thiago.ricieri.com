@@ -6,6 +6,7 @@ tags:
 - mindfulness
 - opinion
 - quality
+published: true
 featured: /assets/posts/2017/smashing-egg.jpg
 ---
 <img src="/assets/posts/2017/smashing-egg.jpg" style="width:100%" alt="The hard part of being a highly respected person" />

@@ -5,12 +5,13 @@ tags:
 - revenue
 - saas
 - subscription
+published: true
 ---
 Have you noticed how many companies have switched to the subscription model?
 
-- [Ulysses], the software I use to type this right now;
-- [Adobe], although they have been running under subscription model for quite a time;
-- [Day One], that purposely always restricted the number of private journals (now it is clear why);
+- [Ulysses](#), the software I use to type this right now;
+- [Adobe](#), although they have been running under subscription model for quite a time;
+- [Day One](#), that purposely always restricted the number of private journals (now it is clear why);
 - Amazon also, with their Prime business model and Kindle Unlimited;
 - Realmac and [Sketch], two companies that used to publish software for Mac are now running successful ventures on the subscription boat.
 

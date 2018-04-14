@@ -1,6 +1,7 @@
 ---
 title: More about me
 type: page
+published: true
 ---
 <br />
 ## Work

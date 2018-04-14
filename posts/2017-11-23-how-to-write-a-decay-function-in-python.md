@@ -6,6 +6,7 @@ tags:
 - programming
 - python
 - reinforcement learning
+published: true
 featured: /assets/posts/2017/splitting-atoms.jpg
 ---
 <img src="/assets/posts/2017/splitting-atoms.jpg" style="width:100%" alt="Splitting atoms in nuclear reaction result in decay" />

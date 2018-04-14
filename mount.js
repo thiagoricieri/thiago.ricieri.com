@@ -93,9 +93,13 @@ function saveHtmlToDist(converted) {
 function isPost(item) {
   return item.meta.type == undefined || item.meta.type == null || item.meta.type == "post"
 }
+function isPublished(item) {
+  return item.meta.published == undefined || item.meta.published == null || item.meta.published
+}
 function generateTableOfContents(converted) {
   return converted
     .filter(isPost)
+    .filter(isPublished)
     .map(each => { return {
       name: each.name,
       date: each.date,

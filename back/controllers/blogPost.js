@@ -26,6 +26,11 @@ module.exports = function (app){
       return
     }
 
+    if (!meta.published) {
+      notFound(httpRes)
+      return
+    }
+
     meta.postTitle = meta.title
     meta.title = `${meta.title} | thiago ricieri blog`
     meta.layout = meta.layout || 'post'
@@ -50,6 +55,11 @@ module.exports = function (app){
     var meta = loadMeta(url)
 
     if (!meta) {
+      notFound(httpRes)
+      return
+    }
+
+    if (!meta.published) {
       notFound(httpRes)
       return
     }

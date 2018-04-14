@@ -7,6 +7,7 @@ tags:
 - javascript
 - problems
 - software
+published: false
 ---
 More thoughtfully, _what sort of specific problems should one be able to solve in order to consider him or herself an expert?_
 

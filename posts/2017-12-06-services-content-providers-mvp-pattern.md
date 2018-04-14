@@ -9,6 +9,7 @@ tags:
 - sdk
 - services
 - software
+published: false
 ---
 This week I got myself wondering when would be the **best practical cases** to use Services, Content Providers, and Model-View-Presenter pattern.
 

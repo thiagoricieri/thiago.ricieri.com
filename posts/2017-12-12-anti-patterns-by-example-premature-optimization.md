@@ -5,6 +5,7 @@ tags:
 - engineering
 - premature optimization
 - software
+published: true
 featured: /assets/posts/2017/doodle-anti-pattern.png
 ---
 <img src="/assets/posts/2017/doodle-anti-pattern.png" style="width:100%" alt="Anti-Patterns by Example: Premature Optimization" />
