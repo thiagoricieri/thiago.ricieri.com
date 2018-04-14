@@ -14,6 +14,12 @@
     </p>
     <%- posts[i].html %>
 
+    <% if(posts[i].tags.length > 0) { %>
+    <p>
+      <small><strong>Tags: </strong><%= posts[i].tags.join(', ') %></small>
+    </p>
+    <% } %>
+
     <hr class="top-border" />
     <div class="text-center padding-four-top padding-four-bottom col-md-12 col-sm-12 col-xs-12 no-padding-lr">
       Share:

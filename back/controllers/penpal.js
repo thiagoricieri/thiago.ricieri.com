@@ -17,7 +17,7 @@ module.exports = function (app){
     }
 
     let email = httpReq.body.email
-    new Penpal({ email })
+    new Penpal({ email, createdAt: new Date() })
       .save()
       .then(ok(httpRes))
       .catch(notOk(httpRes))

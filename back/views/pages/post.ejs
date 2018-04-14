@@ -15,6 +15,12 @@
 
     <%- html %>
 
+    <% if(tags.length > 0) { %>
+    <p>
+      <small><strong>Tags: </strong><%= tags.join(', ') %></small>
+    </p>
+    <% } %>
+
     <% if (hasApp) { %>
       <hr />
       <a class="btn btn-primary" href="/<%= url %>/app" role="button">
