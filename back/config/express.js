@@ -4,6 +4,7 @@ const express = require('express')
     , expressValidator = require('express-validator')
     , blog = require('../routes/blog')
     , pages = require('../routes/pages')
+    , penpal = require('../routes/penpal')
     , path = require('path')
 
 module.exports = function(){
@@ -21,6 +22,7 @@ module.exports = function(){
 
   blog(app)
   pages(app)
+  penpal(app)
 
   console.log('Running blog @ 3001')
 
