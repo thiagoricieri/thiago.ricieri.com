@@ -1,5 +1,5 @@
 const constants = require('../config/constants')
-    , Penpal = require('../database/Penpal')
+    , Penpal = require('../database/penpal')
     , { ok, notOk } = require('../utils/json')
     , { check, validationResult } = require('express-validator/check')
 
