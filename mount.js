@@ -1,7 +1,7 @@
 const fs = require('fs')
     , jsyaml = require('js-yaml')
     , showdown = require('showdown')
-    , config = JSON.parse(fs.readFileSync('./mount.config.json', 'utf8'))
+    , config = require('./mount.config')
     , converter = new showdown.Converter({
         omitExtraWLInCodeBlocks: true,
         simplifiedAutoLink: true,
